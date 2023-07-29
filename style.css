@@ -36,12 +36,21 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+ height: 100vh;
+ 
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
-
+@media(min-width:700px){
+  :root{
+    --bg-url:url(./assets/bg-desktop.jpg);
+  }
+  .light{
+    --bg-url:url(./assets/bg-desktop-light.jpg);
+  }
+}
 #container {
   width: 100%;
   max-width: 588px;
@@ -77,11 +86,10 @@ body * {
   padding: 0;
   width: 64px;
   margin: 4px auto;
-  cursor: pointer; 
+  cursor: pointer;
 }
-.light #switch button{
+.light #switch button {
   right: 0px;
-
 }
 #switch button {
   width: 32px;
@@ -94,7 +102,6 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   cursor: pointer;
- 
 }
 
 #switch span {
