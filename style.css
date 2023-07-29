@@ -18,7 +18,7 @@
 
   --switch-bg-url: url("./assets/moon-stars.svg");
 
-  --bg-tag:rgba(53, 5, 141, 0.603);
+  --bg-tag:rgba(116, 9, 138, 0.397);
 }
 
 .light {
@@ -34,7 +34,7 @@
   --higlight-hover: rgba(0, 0, 0, 0.1);
 
   --switch-bg-url: url("./assets/sun.svg");
-  --bg-tag:rgba(116, 9, 138, 0.397);
+  --bg-tag:rgba(116, 9, 138, 0.658);
 }
 
 body {
@@ -161,7 +161,7 @@ ul.links li a {
 .tag{
   position: absolute;
   right: 12px;
-  top: 4px;
+  top: -10px;
   background: var(--bg-tag);
   color: #fff;
   width: 44px;
