@@ -3,13 +3,43 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --text-color: #fff;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --border-img: #fff8;
+
+  --border-button: rgba(255, 255, 255, 0.5);
+  --bg-button: rgba(255, 255, 255, 0.1);
+
+  --border-button-hover: #fff;
+  --bg-button-hover: rgba(255, 255, 255, 0.05);
+
+  --bg-social-link-hover: rgba(255, 255, 255, 0.2);
+
+  --switch-bg-url: url("./assets/moon-stars.svg");
+}
+
+.light {
+  --text-color: #000;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --border-img: #0005;
+
+  --border-button: rgba(0, 0, 0, 0.5);
+  --bg-button: rgba(0, 0, 0, 0.05);
+  --border-button-hover: #000;
+  --bg-button-hover: rgba(0, 0, 0, 0.02);
+
+  --bg-social-link-hover: rgba(0, 0, 0, 0.1);
+
+  --switch-bg-url: url("./assets/sun.svg");
+}
 
 body {
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffff;
+  color: var(--text-color);
 }
 
 #container {
@@ -29,13 +59,9 @@ body * {
   width: 112px;
   height: 112px;
   clip-path: circle(50% at 50% 50%);
-  border: solid 2px #fff8;
+  border: solid 2px var(--border-img);
   border-style: inset;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 #profile p {
@@ -46,9 +72,39 @@ body * {
 }
 
 #switch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  padding: 0;
+  width: 64px;
+  margin: 4px auto;
+  cursor: pointer; 
+}
+.light #switch button{
+  right: 0px;
+
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: #fff var(--switch-bg-url) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+ 
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--border-button);
+  background: var(--bg-button);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 ul.links {
@@ -64,16 +120,16 @@ ul.links li {
   width: 100%;
   padding: 16px 24px;
   border-radius: 8px;
-  border: 1px solid #fff5;
-  background: #fff1;
+  border: 1px solid var(--border-button);
+  background: var(--bg-button);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   transition: background 0.5s;
 }
 
 ul.links li:hover {
-  border: 1.5px solid #fff;
-  background: #fff5;
+  border: 1.5px solid var(--border-button-hover);
+  background: var(--bg-button-hover);
 }
 
 ul.links li a {
@@ -97,8 +153,13 @@ ul.links li a {
   padding: 16px;
   border-radius: 50%;
 }
+.social-links ion-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
+}
 .social-links a:hover {
-  background: #fff2;
+  background: var(--bg-social-link-hover);
 }
 
 footer {
