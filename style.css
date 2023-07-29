@@ -14,7 +14,7 @@
   --border-button-hover: #fff;
   --bg-button-hover: rgba(255, 255, 255, 0.05);
 
-  --bg-social-link-hover: rgba(255, 255, 255, 0.2);
+  --higlight-hover: rgba(255, 255, 255, 0.2);
 
   --switch-bg-url: url("./assets/moon-stars.svg");
 }
@@ -29,7 +29,7 @@
   --border-button-hover: #000;
   --bg-button-hover: rgba(0, 0, 0, 0.02);
 
-  --bg-social-link-hover: rgba(0, 0, 0, 0.1);
+  --higlight-hover: rgba(0, 0, 0, 0.1);
 
   --switch-bg-url: url("./assets/sun.svg");
 }
@@ -87,9 +87,11 @@ body * {
   width: 64px;
   margin: 4px auto;
   cursor: pointer;
+ 
 }
 .light #switch button {
-  right: 0px;
+ animation: switch-in 0.4s forwards;
+ -webkit-animation: switch-in 0.4s forwards;
 }
 #switch button {
   width: 32px;
@@ -102,6 +104,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   cursor: pointer;
+  animation: switch-out 0.4s ;
+  -webkit-animation: switch-out 0.4s ;
+}
+#switch button:hover{
+  outline: 8px solid var(--higlight-hover);
 }
 
 #switch span {
@@ -167,10 +174,27 @@ ul.links li a {
   color: var(--text-color);
 }
 .social-links a:hover {
-  background: var(--bg-social-link-hover);
+  background: var(--higlight-hover);
 }
 
 footer {
   padding: 24px;
   text-align: center;
+}
+
+@keyframes switch-in{
+  from{
+    left:0
+  }
+  to{
+    left: 50%;
+  }
+}
+@keyframes switch-out{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
 }
