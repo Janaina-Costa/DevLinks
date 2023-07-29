@@ -17,6 +17,8 @@
   --higlight-hover: rgba(255, 255, 255, 0.2);
 
   --switch-bg-url: url("./assets/moon-stars.svg");
+
+  --bg-tag:rgba(53, 5, 141, 0.603);
 }
 
 .light {
@@ -32,6 +34,7 @@
   --higlight-hover: rgba(0, 0, 0, 0.1);
 
   --switch-bg-url: url("./assets/sun.svg");
+  --bg-tag:rgba(116, 9, 138, 0.397);
 }
 
 body {
@@ -72,6 +75,7 @@ body * {
   border: solid 2px var(--border-img);
   border-style: inset;
   border-radius: 50%;
+  
 }
 
 #profile p {
@@ -132,6 +136,7 @@ ul.links {
 }
 
 ul.links li {
+  position: relative;
   width: 100%;
   padding: 16px 24px;
   border-radius: 8px;
@@ -153,7 +158,22 @@ ul.links li a {
   align-items: center;
   justify-content: center;
 }
-
+.tag{
+  position: absolute;
+  right: 12px;
+  top: 4px;
+  background: var(--bg-tag);
+  color: #fff;
+  width: 44px;
+  padding: 2px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
 .social-links {
   display: flex;
   align-items: center;
