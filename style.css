@@ -18,7 +18,7 @@
 
   --switch-bg-url: url("./assets/moon-stars.svg");
 
-  --bg-tag:rgba(116, 9, 138, 0.397);
+  --bg-tag: rgba(116, 9, 138, 0.397);
 }
 
 .light {
@@ -34,24 +34,23 @@
   --higlight-hover: rgba(0, 0, 0, 0.1);
 
   --switch-bg-url: url("./assets/sun.svg");
-  --bg-tag:rgba(116, 9, 138, 0.658);
+  --bg-tag: rgba(116, 9, 138, 0.658);
 }
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
- height: 100vh;
- 
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
-@media(min-width:700px){
-  :root{
-    --bg-url:url(./assets/bg-desktop.jpg);
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
-  .light{
-    --bg-url:url(./assets/bg-desktop-light.jpg);
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
 #container {
@@ -75,7 +74,6 @@ body * {
   border: solid 2px var(--border-img);
   border-style: inset;
   border-radius: 50%;
-  
 }
 
 #profile p {
@@ -91,11 +89,10 @@ body * {
   width: 64px;
   margin: 4px auto;
   cursor: pointer;
- 
 }
 .light #switch button {
- animation: switch-in 0.4s forwards;
- -webkit-animation: switch-in 0.4s forwards;
+  animation: switch-in 0.4s forwards;
+  -webkit-animation: switch-in 0.4s forwards;
 }
 #switch button {
   width: 32px;
@@ -108,10 +105,10 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   cursor: pointer;
-  animation: switch-out 0.4s ;
-  -webkit-animation: switch-out 0.4s ;
+  animation: switch-out 0.4s;
+  -webkit-animation: switch-out 0.4s;
 }
-#switch button:hover{
+#switch button:hover {
   outline: 8px solid var(--higlight-hover);
 }
 
@@ -158,7 +155,7 @@ ul.links li a {
   align-items: center;
   justify-content: center;
 }
-.tag{
+.tag {
   position: absolute;
   right: 12px;
   top: -10px;
@@ -202,19 +199,19 @@ footer {
   text-align: center;
 }
 
-@keyframes switch-in{
-  from{
-    left:0
+@keyframes switch-in {
+  from {
+    left: 0;
   }
-  to{
+  to {
     left: 50%;
   }
 }
-@keyframes switch-out{
-  from{
+@keyframes switch-out {
+  from {
     left: 50%;
   }
-  to{
+  to {
     left: 0;
   }
 }

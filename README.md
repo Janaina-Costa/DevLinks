@@ -17,7 +17,7 @@
 
 
 <p  align='center'>
-    <img alt='Projeto DevLink' src='.github/projeto.png'>
+    <img alt='Projeto DevLink' src='.github/preview.png'>
 </p>
 
 ##  🔧 Tecnologias
